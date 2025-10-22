@@ -1,39 +1,36 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Navigation from './components/Navigation'
-import ViewCars from './pages/ViewCars'
-import EditCar from './pages/EditCar'
-import CreateCar from './pages/CreateCar'
-import CarDetails from './pages/CarDetails'
+import ViewMugs from './pages/ViewMugs'
+import EditMug from './pages/EditMug'
+import CreateMug from './pages/CreateMug'
+import MugDetails from './pages/MugDetails'
 import './App.css'
 
 const App = () => {
   let element = useRoutes([
     {
       path: '/',
-      element: <CreateCar title='BOLT BUCKET | Customize' />
+      element: <CreateMug title='MUG MAKER | Customize' />
     },
     {
-      path:'/customcars',
-      element: <ViewCars title='BOLT BUCKET | Custom Cars' />
+      path:'/custommugs',
+      element: <ViewMugs title='MUG MAKER | All Mugs' />
     },
     {
-      path: '/customcars/:id',
-      element: <CarDetails title='BOLT BUCKET | View' />
+      path: '/custommugs/:id',
+      element: <MugDetails title='MUG MAKER | Details' />
     },
     {
       path: '/edit/:id',
-      element: <EditCar title='BOLT BUCKET | Edit' />
+      element: <EditMug title='MUG MAKER | Edit' />
     }
   ])
 
   return (
     <div className='app'>
-
       <Navigation />
-
       { element }
-
     </div>
   )
 }
