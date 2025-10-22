@@ -1,0 +1,60 @@
+/* ViewMugs.css */
+
+.mugs-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mugs-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .mug-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mug-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .mug-info {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .mug-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .mug-actions a,
+  .mug-actions button {
+    background: #f0f0f0;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .mug-actions a:hover,
+  .mug-actions button:hover {
+    background: #e0e0e0;
+  }
+  

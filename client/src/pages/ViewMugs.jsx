@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllMugs, deleteMug } from '../services/MugsAPI';
+import '../css/ViewMugs.css';
+
 
 export default function ViewMugs() {
   const [mugs, setMugs] = useState([]);
@@ -25,18 +27,22 @@ export default function ViewMugs() {
   };
 
   return (
-    <div>
+    <div className="mugs-page">
       <h2>🧾 Saved Mugs</h2>
-      <ul>
+      <ul className="mug-list">
         {mugs.map((mug) => (
-          <li key={mug.id}>
-            {mug.color} {mug.size} mug with {mug.design} - ${mug.price}
-            <a href={`/edit/${mug.id}`}>✏️</a>
-            <a href={`/custommugs/${mug.id}`}>🔍</a>
-            <button onClick={() => handleDelete(mug.id)}>🗑</button>
+          <li key={mug.id} className="mug-item">
+            <div className="mug-info">
+              {mug.color} {mug.size} mug with {mug.design} - ${mug.price}
+            </div>
+            <div className="mug-actions">
+              <a href={`/edit/${mug.id}`} title="Edit Mug">✏️</a>
+              <a href={`/custommugs/${mug.id}`} title="View Details">🔍</a>
+              <button onClick={() => handleDelete(mug.id)} title="Delete Mug">🗑</button>
+            </div>
           </li>
         ))}
       </ul>
     </div>
   );
-}
+}  
